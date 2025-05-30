@@ -1,0 +1,344 @@
+$small-input-width: 145px;
+
+* {
+  margin:0px;
+  font-size: 13px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  margin: 0px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#ecease_container {
+  border: 1px solid black;
+  width: 730px;
+  padding-bottom: 5px;
+
+  button {
+    cursor: pointer;
+    float: right;
+    margin: 7px 0px;
+    padding: 5px 10px;
+    border: 1px solid #c9cdd1;
+  }
+
+  hr {
+    margin: auto;
+    width: 96%;
+    border: 1px solid grey;
+    border-bottom: none;
+  }
+
+  q {
+    font-style: italic;
+    margin: auto;
+    vertical-align: bottom;
+  }
+
+  ul {
+    padding-left: 25px;
+    margin: 0px;
+  }
+
+  .ecease_tooltip {
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    line-height: 1.4;
+    box-shadow: 0 2px 50px -5px #777;
+    user-select: none;
+
+    div {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+  }
+
+  #ecease_arrow {
+    visibility: visible;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .ecease_tooltip[data-placement^='top'] > #ecease_arrow {
+    border-top: 10px solid #fff;
+    bottom: -8px;
+  }
+
+  .ecease_tooltip[data-placement^='bottom'] > #ecease_arrow {
+    border-bottom: 10px solid #fff;
+    top: -8px;
+  }
+
+  .ecease_h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .ecease_h4 {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+#ecease_image_container {
+  img {
+    display: block;
+    margin: 5px auto;
+  }
+}
+
+#ecease_information {
+  flex: 1;
+}
+
+.ecease_content {
+  margin: 5px 10px;
+}
+
+#ecease_title {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+#ecease_overview {
+  margin: 5px 15px;
+}
+
+#ecease_overview_section {
+
+  * {
+    margin: 5px ;
+  }
+
+  div {
+    margin: 0px;
+  }
+}
+
+#ecease_treatment_options {
+  margin: 5px 15px;
+
+  * {
+    margin: 5px;
+  }
+
+  div {
+    margin: 0px;
+  }
+}
+
+#ecease_treatment_selections {
+
+  .ecease_treatment_option {
+    display: flex;
+  }
+
+  .ecease_treatment_checkbox {
+    display: flex;
+    align-items: center;
+    flex: 0 0 465px
+  }
+
+  .ecease_treatment_enrollment {
+      display: flex;
+      align-items: center;
+  }
+
+  button {
+    float: none;
+
+    .ecease_disabled {
+      opacity: 0.4;
+    }
+  }
+}
+
+#ecease_documentation {
+  margin: 5px 10px;
+
+  * {
+    margin: 5px;
+    vertical-align: middle;
+  }
+
+  div {
+    margin: 0px;
+  }
+
+  img {
+    margin: 0px;
+  }
+
+  input {
+    margin-right: 0px;
+  }
+
+  label {
+    margin-right: 10px;
+  }
+
+  #ecease_documentation_options {
+    margin-left: 5px;
+  }
+}
+
+#ecease_discussed {
+  margin: 0px 10px;
+
+  * {
+    vertical-align: middle;
+    margin: 5px;
+  }
+}
+
+#ecease_tips, #ecease_info, #ecease_doc_help {
+  margin: 5px 20px 5px 10px;
+
+  * {
+    vertical-align: middle;
+    margin: 5px;
+  }
+
+  div {
+      margin-bottom: 15px;
+  }
+
+  li {
+    .ecease_list_strong {
+      font-weight: bold;
+      vertical-align: bottom;
+      margin: 0px;
+    }
+  }
+
+  q {
+    margin: 0px;
+  }
+
+  table, td, th {
+    border: 1px solid black;
+  }
+
+  table {
+    margin: 5px 0px;
+    border-collapse: collapse;
+  }
+}
+
+.ecease_flex {
+  display: flex;
+}
+
+#ecease_caregiver_info {
+  margin: 5px 10px;
+
+  * {
+    margin: 2px;
+  }
+
+  button {
+    margin: 5px;
+    float: none;
+  }
+
+  #ecease_info_form {
+    flex-wrap: wrap;
+    margin-top: 5px;
+
+    .ecease_form_field {
+      display:flex;
+    }
+
+    input {
+      margin-right: 0px;
+      flex: 0 0 300px;
+      border: 1px solid black;
+      padding: 2px;
+    }
+
+    input[valid="true"] {
+      border: 1px solid green;
+    }
+
+    input[valid="false"] {
+      border: 1px solid red;
+    }
+
+    input[type="dob"] {
+      flex: 0 0 $small-input-width;
+    }
+
+    input[type="phone"] {
+      flex: 0 0 $small-input-width;
+    }
+
+    input[type="zip"] {
+      flex: 0 0 $small-input-width;
+    }
+
+    input[type="address"] {
+      flex: 0 0 $small-input-width;
+    }
+
+    label {
+      display: flex;
+      flex: 0 0 190px;
+      text-align: left;
+      align-items: center;
+      margin-right: 5px;
+
+      &::after {
+        content: ":";
+      }
+    }
+
+    #ecease_ins_type {
+      margin: 5px 0px;
+
+      * {
+        vertical-align: middle;
+      }
+
+      label {
+        display: inline;
+        margin: 5px;
+        margin-right: 10px;
+
+        &::after {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+#ecease_add_problem {
+  margin: 5px 10px;
+  display: flex;
+  align-items: center;
+
+  button {
+    float: none;
+    margin-left: 10px;
+  }
+
+  p {
+    margin-left: 10px;
+  }
+}
